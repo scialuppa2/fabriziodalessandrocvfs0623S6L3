@@ -1,0 +1,77 @@
+@import "reset";
+@import "variabili";
+@import "mixins";
+@import "animations";
+
+header, #hero{
+    background-color: $coloreSfondo;
+    font-family: $font;
+}
+
+nav{
+    display: flex;
+   img{
+    @include logoNavbar;
+}  
+    ul{
+    display: flex;
+}
+li{
+    list-style: none;
+    color: white;
+    padding: 2em;
+    cursor: pointer;
+}
+}
+
+h1{
+    font-size: 5em;
+    margin-bottom: 0.5em;
+}
+
+#hero button:first-of-type{
+    @include heroButtons($bottoneBlu)
+}
+#hero button:nth-last-of-type(2){
+    @include heroButtons($bottoneOrange)
+}
+#hero button:nth-last-of-type(1){
+    @include heroButtons($bottoneVerde)
+}
+#hero button:hover{
+    transform: scale(0.8);
+}
+
+#hero{
+    display: flex;
+    padding: 6em 8em;
+    animation-name: dissolvenza;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+#hero img{
+    @include floating;
+    width: 20em;
+    height: 20em;
+    margin: 3em;
+}
+#hero p{
+    color: rgba(148, 148, 148, 0.932);
+    margin-bottom: 5em;
+}
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5em;
+}
+section img{
+    @include fotoCard;
+    @include floating;
+}
+
+@keyframes dissolvenza {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

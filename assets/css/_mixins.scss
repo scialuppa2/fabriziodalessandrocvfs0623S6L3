@@ -1,0 +1,25 @@
+@mixin logoNavbar{
+    width: 10%;
+    height: auto;
+}
+
+@mixin heroButtons($colore){
+    color: white;
+    font-size: 0.5em;
+    background-color: $colore;
+    border-radius: 10%;
+    width: 20%;
+    height: auto;
+    padding: 1.5em;
+    margin: 1.5em;
+}
+
+@mixin floating{
+    border-radius: 5%;
+    box-shadow: 1px 1px 5px black;
+}
+
+@mixin fotoCard{
+    width: 15%;
+    height: auto;
+}
